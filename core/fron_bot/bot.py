@@ -19,12 +19,10 @@ bot = telebot.TeleBot(apy_key, parse_mode='HTML')
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     print(message.chat.id)
-    print(mysql.check_user_exist(message.chat.id))
-    if mysql.check_user_exist(message.chat.id) != 200:
+    if mysql.check_user_exist(message.chat.id) == 0:
         mysql.add_user(message.chat.id)
-        print(1)
-
-
+    else:
+        pass
     bot.reply_to(message, "Howdy, how are you doing?")
 
 
