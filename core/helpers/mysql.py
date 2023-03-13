@@ -1,7 +1,7 @@
 import pymysql
 import datetime
 
-con = pymysql.connect(host='95.214.63.160', user='bot_test', password='120984', database='test_bot')
+con = pymysql.connect(host='йцукен', user='bot_test', password='йцукен', database='test_bot')
 
 
 def check_user_exist(user_id):
